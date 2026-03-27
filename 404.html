@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>重定向...</title>
+  <script>
+    // 单页应用404处理 - 重定向到根路径
+    var path = window.location.pathname;
+    var search = window.location.search;
+    var hash = window.location.hash;
+    // 保存当前路径到sessionStorage，让index.html可以恢复路由
+    sessionStorage.setItem('redirect_path', path + search + hash);
+    // 重定向到根
+    window.location.replace('/hlorno-crm/');
+  </script>
+</head>
+<body>
+  <p>正在加载...</p>
+</body>
+</html>
